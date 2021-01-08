@@ -1,38 +1,347 @@
-.App {
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Work Sans", sans-serif;
+}
+ul {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.li {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.li:hover {
+  list-style: none;
+  text-decoration: none;
+}
+.app {
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+.top-nav-containor {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  vertical-align: center;
+  border-bottom: 1px solid rgb(218, 210, 210);
+}
+.fa-shopping-cart {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-nav-containor p {
+  padding-left: 20px;
+}
+.top-nav-containor div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.top-nav-containor div i {
+  margin-right: 0px;
+}
+.cart {
+  position: relative;
+  /* border: 1px solid red; */
+  margin-right: 50px;
+}
+.cart-notification {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: rgb(221, 41, 41);
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  position: absolute;
+  top: -18px;
+  right: 10px;
+  justify-content: center;
+  vertical-align: middle;
+}
+.nav-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgb(218, 210, 210);
+}
+.nav-ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-li {
+  margin: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding: 10px;
+  transition: 0.3s;
+  font-weight: 600;
+}
+.nav-li.nav-li:hover {
+  border-bottom: 4px solid black;
+}
+
+.card-holder {
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 2%;
   text-align: center;
+  /* border: 1px solid red; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cardContainor h1 {
+  text-align: center;
+  width: 100%;
+}
+/* Instock Card */
+/* Instock Card */
+/* Instock Card */
+/* Instock Card */
+/* Instock Card */
+.mycard {
+  overflow: hidden;
+  width: 300px;
+  height: 400px;
+  position: relative;
+  /* border: 1px solid green; */
+  display: inline-block;
+  margin-left: 7%;
+  margin-bottom: 2%;
+}
+.mycard img {
+  width: 100%;
+  /* border: 1px solid red; */
+}
+.mycard div {
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.mycard:hover {
+  border-bottom: 2px solid rgb(77, 77, 112);
+}
+.discount-tag {
+  position: absolute;
+  z-index: 1;
+  background-color: black;
+  padding: 10px;
+  width: 100px;
+  height: 5px;
+  top: 20px;
+  left: -30px;
+  transform: rotate(-45deg);
+  color: white;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.dataTime-tag {
+  position: absolute;
+  z-index: 1;
+  left: 5%;
+  top: 5%;
+  /* border: 1px solid red; */
+  top: 20px;
+  font-weight: 700;
+  font-size: 1.8rem;
+  display: flex;
+  /* justify-content: space-around; */
+  flex-direction: column;
+  /* a11lign-items: center; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Card FEED*/
+/* Card FEED*/
+/* Card FEED*/
+/* Card */
+/* Card */
+/* Card */
+.flip-card-front img {
+  width: 100%;
+}
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  /* margin-left: 10%; */
+  display: inline-block;
+  margin-bottom: 5%;
+  margin-right: 4%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  display: flex;
+}
+
+.btns {
+  border: 1px solid #2980b9;
+  border-radius: 7%;
+  background-color: black;
+  padding: 8px;
+  color: white;
+}
+.btns:hover {
+  background-color: blanchedalmond;
+  color: black;
+}
+/* Shoe */
+/* Shoe */
+/* Shoe */
+/* Shoe */
+.shoeCon {
+  display: flex;
+  justify-content: center;
+}
+.shoe {
+  justify-content: center;
+  display: flex;
+  width: 50%;
+  /* border: 1px solid red; */
+  align-items: center;
+  flex-direction: column;
+}
+.shoe img {
+  width: 100%;
+}
+.InfoCard {
+  width: 100%;
+  background-color: rgb(192, 187, 178);
+}
+.shoeLink {
+  text-decoration: none;
+  list-style: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* CLose */
+/* CLose */
+/* CLose */
+/* CLose */
+/* CLose */
+/* CLose */
+:root {
+  --softorange: #f4a259;
+  --tomatored: #f25c66;
+  --mediumblu: #1e272d;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ody {
+  background-color: var(--mediumblu);
+}
+
+.close-container {
+  position: relative;
+  margin: auto;
+  width: 20px;
+  height: 20px;
+  margin-top: 100px;
+  cursor: pointer;
+  position: absolute;
+  top: -80px;
+  right: 20px;
+}
+
+.leftright {
+  height: 4px;
+  width: 30px;
+  position: absolute;
+  margin-top: 24px;
+  background-color: var(--softorange);
+  border-radius: 2px;
+  transform: rotate(45deg);
+  transition: all 0.3s ease-in;
+}
+
+.rightleft {
+  height: 4px;
+  width: 30px;
+  position: absolute;
+  margin-top: 24px;
+  background-color: var(--softorange);
+  border-radius: 2px;
+  transform: rotate(-45deg);
+  transition: all 0.3s ease-in;
+}
+
+label {
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease-in;
+  opacity: 0;
+}
+.close {
+  margin: 60px 0 0 5px;
+  position: absolute;
+  visibility: hidden;
+  /* font-size: 0.2rem; */
+}
+
+.close-container:hover .leftright {
+  transform: rotate(-45deg);
+  background-color: var(--tomatored);
+}
+.close-container:hover .rightleft {
+  transform: rotate(45deg);
+  background-color: var(--tomatored);
+}
+.close-container:hover label {
+  opacity: 1;
+}
+.close-container:hover .close {
+  visibility: visible;
+  /* font-size: 0.2rem; */
 }
