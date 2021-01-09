@@ -7,6 +7,20 @@ Context API
 
 Notificaiton Components React
 
+Add Item to Cart
+
+Notifcation in Adding Item in Cart
+
+Cart Icon update the number of Items in Cart
+
+Feed Page
+
+In Stock Page with Discount Mention
+
+Upcoming Item with Date Mention
+
+Remove Item from Cart in a Cart Page. Cart Icon will update the number of Item in Cart...
+
 # Link:: shahRukh-ShoeStore.surge.sh
 
 # Getting Started with Create React App
